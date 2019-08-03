@@ -1,0 +1,126 @@
+.conversation-header {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  margin: 0 10px 0 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.conversation-header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conversation-header button {
+  border: none;
+  background-color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+.conversation-header .material-icons {
+  font-size: 26px;
+  padding: 6px;
+  color: rgba(0, 0, 0, 0.54);
+  border: rgba(0, 0, 0, 0) solid 1px;
+  border-radius: 50%;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.chat-box {
+  margin: 20px;
+  width: 100%;
+}
+
+.chat-messages {
+  /* Adds side scroll function and then visually hides it */
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 30px;
+  max-height: 270px;
+}
+
+/* Individual message (avatar + message) */
+.chat-messages .message {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Message from the right */
+.chat-messages .message-right {
+  flex-direction: row-reverse;
+}
+
+/* Only the message */
+.message .bubble {
+  background: #f0f4f7;
+  padding: 12px 13px;
+  border-radius: 5px 5px 5px 0px;
+  position: relative;
+  margin-left: 10%;
+}
+
+.message-right .bubble {
+  margin-right: 10%;
+}
+
+/* Speech bubble generator @ https://leaverou.github.io/bubbly/ */
+.message .bubble::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-right-color: #f0f4f7;
+  margin-top: -10px;
+  left: 0;
+  border-left: 0;
+  margin-left: -10px;
+}
+
+.message-right .bubble::after {
+  right: 0;
+  border-right: 0;
+  margin-right: -10px;
+}
+
+/* ---Send message--- */
+.send-message {
+  margin-right: 40px;
+  opacity: 0.8;
+}
+
+.send-message textarea,
+.send-message button {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.send-message textarea {
+  height: 70px;
+  margin-top: 20px;
+  line-height: 40px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.send-message button {
+  height: 40px;
+  margin-top: 10px;
+  line-height: 40px;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

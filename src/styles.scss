@@ -1,0 +1,216 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, input, textarea, button {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+}
+
+body {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #eceff4;
+}
+
+a {
+    text-decoration: none;
+}
+
+b,
+strong,
+table th {
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.box,
+.messenger {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 400px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.box-red {
+    background-color: #fb434f;
+}
+
+.box-gray {
+    background-color: #697a84;
+}
+
+.box-blue {
+    background-color: #02a8fe;
+}
+
+.box-black {
+    background-color: #2e2c3a;
+}
+
+/* Box flash on hover */
+.box:hover,
+.messenger:hover {
+    opacity: 1;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes flash {
+    0% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.wrapper {
+    height: 100%;
+}
+
+/* Avatar */
+.round-image {
+    height: 50px;
+    max-height: 40px;
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+/* CSS Sprites */
+.gear-icon,
+.bug-icon,
+.graph-icon,
+.project-icon,
+.send-icon,
+.docu-icon,
+.home-icon,
+.profile-icon,
+.chat-icon,
+.exchange-icon,
+.calendar-icon,
+.gallery-icon,
+.delete-icon {
+    background-image: url('assets/icons-sprite.png');
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+}
+
+.gear-icon {
+    background-position: -335px -133px;
+}
+
+.bug-icon {
+    background-position: -166px -65px;
+}
+
+.graph-icon {
+    background-position: -98px -98px;
+}
+
+.project-icon {
+    background-position: -199px -167px;
+}
+
+.send-icon {
+    background-position: -197px -33px;
+}
+
+.docu-icon {
+    background-position: -132px 2px;
+}
+
+.home-icon {
+    background-position: -234px -202px;
+}
+
+.profile-icon {
+    background-position: 3px -66px;
+}
+
+.chat-icon {
+    background-position: -302px -269px;
+}
+
+.exchange-icon {
+    background-position: -372px -203px;
+}
+
+.calendar-icon {
+    background-position: -202px -66px;
+}
+
+.gallery-icon {
+    background-position: -304px -33px;
+}
+
+.delete-icon {
+    background-position: -98px -167px;
+}
+
+/* Buttons */
+.add-button-dark,
+.add-button-light {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-button-dark {
+    display: inline;
+    margin-right: 10px;
+    &:hover {
+      filter: brightness(90%);
+      -webkit-filter: brightness(90%);
+      -webkit-transition: 0.2s ease-out;
+      transition: 0.2s ease-out;
+    }
+  }
+
+.add-button-dark p {
+  font-size: 13px;
+  color: #fff;
+  padding: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}

@@ -1,0 +1,29 @@
+<!-- Container for sidebar(s) + page content -->
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar-logo">
+        <a href="">
+            <img src="../assets/logo-inverse.png" alt="" class="logo">
+        </a>
+        <a class="sidebar-close" (click)="toggleSidebar.emit()">
+            <i class="material-icons">arrow_back_ios</i>
+        </a>
+    </div>
+    <nav class="sidebar-links">
+        <ul>
+            <li><a routerLink="#"><span class="gear-icon"></span>Theme Settings</a></li>
+            <li><a routerLink="#"><span class="docu-icon"></span>Documentation</a></li>
+            <li>
+                <hr>
+            </li>
+            <li><a routerLink=""><span class="home-icon"></span>Dashboard (active)</a></li>
+            <li>
+                <hr>
+            </li>
+            <li><a routerLink="#"><span class="profile-icon"></span>Profile</a></li>
+            <li><a routerLink="/messaging"><span class="chat-icon"></span>Messaging (active)</a></li>
+            <li><a routerLink="#"><span class="exchange-icon"></span>Mail</a></li>
+            <li><a routerLink="#"><span class="calendar-icon"></span>Calendar</a></li>
+            <li><a routerLink="#"><span class="gallery-icon"></span>Gallery</a></li>
+        </ul>
+    </nav>
+</aside>

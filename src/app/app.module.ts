@@ -10,11 +10,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MessagingComponent } from './messaging/messaging.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { WidgetCreateComponent } from './widget-create/widget-create.component';
-import { WidgetTableDetailsComponent } from './widget-table-details/widget-table-details.component';
-import { WidgetTableUpdateComponent } from './widget-table-update/widget-table-update.component';
-import { WidgetTableCreateComponent } from './widget-table-create/widget-table-create.component';
-import { ResourcesService } from './resources/widget/resources.service';
 
 @NgModule({
   declarations: [
@@ -24,10 +19,6 @@ import { ResourcesService } from './resources/widget/resources.service';
     DashboardComponent,
     MessagingComponent,
     NotFoundComponent,
-    WidgetCreateComponent,
-    WidgetTableDetailsComponent,
-    WidgetTableUpdateComponent,
-    WidgetTableCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +26,7 @@ import { ResourcesService } from './resources/widget/resources.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ResourcesService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,14 +7,14 @@ import { ResourcesService } from '../resources/widget/resources.service';
   templateUrl: './widget-messenger-details.component.html',
   styleUrls: ['./widget-messenger-details.component.scss']
 })
-export class WidgetMessengerDetailsComponent implements OnInit{
+export class WidgetMessengerDetailsComponent implements OnInit {
   @Input() widgetInfo: WidgetMessenger;
   @Output() widgetDelete = new EventEmitter<number>();
 
   // Hardcoded current user id for testing
   currentUserId: number = 128725;
 
-  constructor(private  resourcesService: ResourcesService) {}
+  constructor(private resourcesService: ResourcesService) { }
 
   ngOnInit() {
   }
@@ -24,7 +24,7 @@ export class WidgetMessengerDetailsComponent implements OnInit{
   }
 
   deleteConfirm(id: number) {
-    if(confirm("Are you sure you want to delete this widget?")) {
+    if (confirm("Are you sure you want to delete this widget?")) {
       this.widgetDelete.emit(this.widgetInfo.id);
     }
   }

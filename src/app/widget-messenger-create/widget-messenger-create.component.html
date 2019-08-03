@@ -1,0 +1,27 @@
+<div id="add-table-modal">
+    <div class="modal-content box">
+        <form id="add-table-input">
+            <div>
+                <h3>
+                    <span id="widget-heading-cu-toggle"> Create New </span>
+                    <span id="widget-heading-toggle">Messenger</span>
+                </h3>
+            </div>
+            <hr>
+            <div class="field">
+                <input type="text" [(ngModel)]="model.title" name="title" required autocomplete="off" id="input-table-title">
+                <label for="input-table-title" title="Title:"></label>
+            </div>
+            <div class="field">
+                <textarea rows="7" [(ngModel)]="model.data" name="data" required autocomplete="off" id="input-table-data"></textarea>
+                <label for="input-table-data" title="Insert data list in a valid JSON format:"></label>
+            </div>
+
+            <div class="modal-btns">
+                <button type="submit" (click)="createWidget()" id="submit" class="box box-red add-button-dark">
+                    <p>Submit</p>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

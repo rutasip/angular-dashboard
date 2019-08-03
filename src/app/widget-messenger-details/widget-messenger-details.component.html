@@ -1,0 +1,28 @@
+{{ current_user }}
+<div class="messenger">
+    <header class="conversation-header">
+        <div>Conversation:&nbsp;<b>{{ widgetInfo.title }}</b></div>
+        <div>
+            <button class="edit-btn"><a [routerLink]="['/widget-messenger-update', widgetInfo.id]"><i
+                        class="material-icons" title="Edit">create</i></a></button>
+            <button class="delete-btn" (click)="deleteConfirm(widgetInfo.id)"><i class="material-icons"
+                    title="Delete">delete</i></button>
+        </div>
+    </header>
+    <section class="chat-box">
+        <div class="chat-messages">
+            <article class="message" *ngFor="let message of widgetInfo.data"
+                [class.message-right]="isCurrentUser(message)">
+                <img class="round-image" src="http://placeimg.com/50/50/people" alt="Placeholder image">
+                <div class="bubble">
+                    <p class="bubble-name"><b>{{ message.first_name }} {{ message.last_name }}</b></p>
+                    <p class="bubble-content">{{ message.message }}</p>
+                </div>
+            </article>
+        </div>
+        <form action="#" class="send-message">
+            <textarea placeholder="Type and press enter" rows="3"></textarea>
+            <button><span class="send-icon"></span>Send</button>
+        </form>
+    </section>
+</div>

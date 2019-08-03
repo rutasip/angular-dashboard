@@ -10,3 +10,11 @@
         </a>
     </button>
 </div>
+
+<div>
+    <ng-container *ngFor="let widget of widgets">
+        <app-widget-table-details *ngIf="widget.type === 'table'" [widgetInfo]="widget" (widgetDelete)="onWidgetDelete($event)"></app-widget-table-details>
+        <app-widget-messenger-details *ngIf="widget.type === 'messenger'" [widgetInfo]="widget" (widgetDelete)="onWidgetDelete($event)">
+        </app-widget-messenger-details>
+    </ng-container>
+</div>

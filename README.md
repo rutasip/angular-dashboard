@@ -26,4 +26,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+
+
 "start": "start npm run json-server && ng serve",
+
+// const jsonServer = require('json-server');
+// const server = jsonServer.create();
+// const router = jsonServer.router('db.json');
+// const middlewares = jsonServer.defaults();
+// const port = process.env.PORT || 3000;
+
+// server.use(middlewares);
+// server.use(router);
+
+// server.listen(port);

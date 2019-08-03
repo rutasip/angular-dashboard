@@ -13,8 +13,7 @@
 
 <div>
     <ng-container *ngFor="let widget of widgets">
-        <app-widget-table-details *ngIf="widget.type === 'table'" [widgetInfo]="widget" (widgetDelete)="onWidgetDelete($event)"></app-widget-table-details>
-        <app-widget-messenger-details *ngIf="widget.type === 'messenger'" [widgetInfo]="widget" (widgetDelete)="onWidgetDelete($event)">
-        </app-widget-messenger-details>
+        <app-widget-table-details *ngIf="widget.type === 'table'" [widgetInfo]="widget"
+            (widgetDelete)="onWidgetDelete($event)"></app-widget-table-details>
     </ng-container>
 </div>

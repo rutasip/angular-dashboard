@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Widget, WidgetTableCreate, WidgetMessengerCreate } from './models';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { Widget } from './models';
 
 @Injectable({
   providedIn: 'root'
@@ -11,25 +9,25 @@ import { retry, catchError } from 'rxjs/operators';
 
 export class ResourcesService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Http Options
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
-  }  
+  }
 
   getWidgets() {
     return this.http.get<Widget[]>(environment.apiUrl + '/widgets')
   }
 
-  getWidgetById(id:number) {
+  getWidgetById(id: number) {
     return this.http.get<Widget[]>(`${environment.apiUrl}/widgets/${id}`);
 
   }
 
-  deleteWidget(id:number){
+  deleteWidget(id: number) {
     return this.http.delete<Widget[]>(`${environment.apiUrl}/widgets/${id}`);
   }
 

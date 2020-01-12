@@ -1,31 +1,31 @@
 app-sidebar {
-    float: left;
+  float: left;
 }
 
 app-topbar {
-    left: 250px;
+  left: 250px;
 }
 
 .right-container {
-    padding: 90px 0 0 280px;
-    overflow: hidden;
+  padding: 90px 0 0 280px;
+  overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    app-sidebar {
-        display: none;
+@media (max-width: 705px) {
+  app-sidebar {
+    display: none;
+  }
+  app-topbar {
+    left: 0;
+  }
+  .right-container {
+    padding: 90px 20px;
+  }
+  .wrapper {
+    &.is-opened {
+      app-sidebar {
+        display: block;
+      }
     }
-    app-topbar {
-        left: 0;
-    }
-    .right-container {
-        padding: 90px 20px;
-    }
-    .wrapper {
-        &.is-opened {
-            app-sidebar {
-                display: block;
-            }
-        }
-    }
+  }
 }

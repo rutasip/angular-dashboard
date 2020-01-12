@@ -1,29 +1,49 @@
-<!-- Container for sidebar(s) + page content -->
 <aside id="sidebar" class="sidebar">
-    <div class="sidebar-logo">
-        <a href="">
-            <img src="../assets/logo-inverse.png" alt="" class="logo">
-        </a>
-        <a class="sidebar-close" (click)="toggleSidebar.emit()">
-            <i class="material-icons">arrow_back_ios</i>
-        </a>
-    </div>
-    <nav class="sidebar-links">
-        <ul>
-            <li><a routerLink="#"><span class="gear-icon"></span>Theme Settings</a></li>
-            <li><a routerLink="#"><span class="docu-icon"></span>Documentation</a></li>
-            <li>
-                <hr>
-            </li>
-            <li><a routerLink=""><span class="home-icon"></span>Dashboard (active)</a></li>
-            <li>
-                <hr>
-            </li>
-            <li><a routerLink="#"><span class="profile-icon"></span>Profile</a></li>
-            <li><a routerLink="/messaging"><span class="chat-icon"></span>Messaging (active)</a></li>
-            <li><a routerLink="#"><span class="exchange-icon"></span>Mail</a></li>
-            <li><a routerLink="#"><span class="calendar-icon"></span>Calendar</a></li>
-            <li><a routerLink="#"><span class="gallery-icon"></span>Gallery</a></li>
-        </ul>
-    </nav>
+  <div class="sidebar-logo">
+    <a href="">
+      <img src="../assets/logo-inverse.png" alt="" class="logo" />
+    </a>
+    <a class="sidebar-close" (click)="toggleSidebar.emit()">
+      <i class="material-icons" title="Close">clear</i>
+    </a>
+  </div>
+  <nav class="sidebar-links">
+    <ul>
+      <li><p>Links are empty except of Dashboard</p></li>
+      <li>
+        <hr />
+      </li>
+      <li>
+        <a routerLink="/"
+          ><i class="material-icons" title="Dashboard">dashboard</i>Dashboard</a
+        >
+      </li>
+      <li>
+        <a routerLink="#"
+          ><i class="material-icons" title="Profile">account_box</i>Profile</a
+        >
+      </li>
+      <li>
+        <a routerLink="/messaging"
+          ><i class="material-icons" title="Messaging">message</i>Messaging</a
+        >
+      </li>
+      <li>
+        <a routerLink="#"
+          ><i class="material-icons" title="Mail">mail</i>Mail</a
+        >
+      </li>
+      <li>
+        <a routerLink="#"
+          ><i class="material-icons" title="Calendar">calendar_today</i
+          >Calendar</a
+        >
+      </li>
+      <li>
+        <a routerLink="#"
+          ><i class="material-icons" title="Gallery">collections</i>Gallery</a
+        >
+      </li>
+    </ul>
+  </nav>
 </aside>

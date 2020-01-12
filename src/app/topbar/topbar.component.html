@@ -1,17 +1,20 @@
 <nav class="main-nav">
-    <a class="nav-ham" (click)="toggleSidebar.emit()">
-        <i class="material-icons">menu</i>
-    </a>
-    <div class="main-nav-left">
-        <a routerLink="#"><span class="bug-icon"></span>Issues History</a>
-        <a routerLink="#"><span class="graph-icon"></span>Dashboards</a>
-        <a routerLink="#"><span class="project-icon"></span>Projects</a>
+  <a class="nav-ham" (click)="toggleSidebar.emit()">
+    <i class="material-icons">menu</i></a
+  >
+  <div class="main-nav-right">
+    <form class="nav-search">
+      <input type="text" placeholder="Search..." class="search-input" />
+      <button type="submit" class="search-button">
+        <i class="material-icons">search</i>
+      </button>
+    </form>
+    <div>
+      <img
+        class="round-image"
+        src="http://placeimg.com/50/50/people"
+        alt="Placeholder image"
+      />
     </div>
-    <div class="main-nav-right">
-        <form class="nav-search">
-            <input type="text" placeholder="Search..." class="search-input" />
-            <button type="submit" class="search-button"><i class="material-icons">search</i></button>
-        </form>
-        <div><img class="round-image" src="http://placeimg.com/50/50/people" alt="Placeholder image"></div>
-    </div>
+  </div>
 </nav>

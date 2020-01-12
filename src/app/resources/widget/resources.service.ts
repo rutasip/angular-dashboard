@@ -1,46 +1,49 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-import { Widget, WidgetTableCreate, WidgetMessengerCreate } from './models';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { environment } from "src/environments/environment";
+import { Widget } from "./models";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
-
 export class ResourcesService {
-
   constructor(private http: HttpClient) {}
 
   // Http Options
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json"
     })
-  }  
+  };
 
   getWidgets() {
-    return this.http.get<Widget[]>(environment.apiUrl + '/widgets')
+    return this.http.get<Widget[]>(environment.apiUrl + "/widgets");
   }
 
-  getWidgetById(id:number) {
+  getWidgetById(id: number) {
     return this.http.get<Widget[]>(`${environment.apiUrl}/widgets/${id}`);
-
   }
 
-  deleteWidget(id:number){
+  deleteWidget(id: number) {
     return this.http.delete<Widget[]>(`${environment.apiUrl}/widgets/${id}`);
   }
 
   createWidget(model) {
     model.data = JSON.parse(model.data);
-    return this.http.post<Widget[]>(environment.apiUrl + '/widgets', JSON.stringify(model), this.httpOptions)
+    return this.http.post<Widget[]>(
+      environment.apiUrl + "/widgets",
+      JSON.stringify(model),
+      this.httpOptions
+    );
   }
 
   updateWidget(model) {
     model.data = JSON.parse(model.data);
-    return this.http.put<Widget[]>(environment.apiUrl + '/widgets/' + model.id, JSON.stringify(model), this.httpOptions)
+    return this.http.put<Widget[]>(
+      environment.apiUrl + "/widgets/" + model.id,
+      JSON.stringify(model),
+      this.httpOptions
+    );
   }
 }
 

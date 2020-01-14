@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
+    "start-local": "json-server --watch db.json --port 3004 && node server-local.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

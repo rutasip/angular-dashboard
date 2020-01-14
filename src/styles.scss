@@ -36,56 +36,12 @@ h3 {
   font-weight: 400;
 }
 
-.box,
-.messenger {
+.button-red {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
   border-radius: 5px;
-  overflow: hidden;
-  max-width: 400px;
   margin-bottom: 20px;
-  background-color: #fff;
-}
-
-.box-red {
-  background-color: #fb434f;
-}
-
-.box-gray {
-  background-color: #697a84;
-}
-
-.box-blue {
-  background-color: #02a8fe;
-}
-
-.box-black {
-  background-color: #2e2c3a;
-}
-
-/* Box flash on hover */
-.box:hover,
-.messenger:hover {
-  opacity: 1;
-  -webkit-animation: flash 1.5s;
-  animation: flash 1.5s;
-}
-
-@-webkit-keyframes flash {
-  0% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes flash {
-  0% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
-  }
+  background-color: #fa2a37;
 }
 
 .hidden {

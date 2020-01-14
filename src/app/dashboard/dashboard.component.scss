@@ -1,0 +1,60 @@
+.widgets {
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
+  column-count: 1;
+  @media (min-width: 1010px) {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+  @media (min-width: 1420px) {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+  @media (min-width: 1900px) {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+.widget {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 290px;
+  max-width: 670px;
+  height: fit-content;
+  margin-bottom: 10px;
+  background-color: #fff;
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+  display: inline-block;
+}
+
+/* Widget flash on hover */
+.widget:hover {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}

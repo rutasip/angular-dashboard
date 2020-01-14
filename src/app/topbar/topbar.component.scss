@@ -50,6 +50,7 @@
   text-decoration: none;
   position: relative;
   display: flex;
+  flex: auto;
 }
 
 .nav-ham > .material-icons {
@@ -91,13 +92,7 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .main-nav :not(.nav-ham) {
-    margin: auto;
-  }
-}
-
-@media (max-width: 425px) {
+@media (max-width: 370px) {
   .search-input {
     width: 100px;
   }

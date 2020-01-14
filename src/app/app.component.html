@@ -1,7 +1,7 @@
 <div [class.is-opened]="opened" class="wrapper">
   <app-sidebar (toggleSidebar)="onToggleSidebar()"></app-sidebar>
 
-  <section id="right-container" class="right-container">
+  <section id="right-container">
     <app-topbar (toggleSidebar)="onToggleSidebar()"></app-topbar>
     <main class="main-content">
       <router-outlet></router-outlet>

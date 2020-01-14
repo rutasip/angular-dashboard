@@ -1,20 +1,34 @@
 <div>
-    <button id="modal-table-btn" class="box box-red add-button-dark">
-        <a routerLink="/widget-table-create">
-            <p>New Table</p>
-        </a>
-    </button>
-    <button id="modal-messenger-btn" class="box box-red add-button-dark">
-        <a routerLink="/widget-messenger-create">
-            <p>New Messenger</p>
-        </a>
-    </button>
+  <button id="modal-table-btn" class="button-red add-button-dark">
+    <a routerLink="/widget-table-create">
+      <p>New Table</p>
+    </a>
+  </button>
+  <button id="modal-messenger-btn" class="button-red add-button-dark">
+    <a routerLink="/widget-messenger-create">
+      <p>New Messenger</p>
+    </a>
+  </button>
 </div>
 
-<div>
-    <ng-container *ngFor="let widget of widgets">
-        <app-widget-table-details *ngIf="widget.type === 'table'" [widgetInfo]="widget" (widgetDelete)="onWidgetDelete($event)"></app-widget-table-details>
-        <app-widget-messenger-details *ngIf="widget.type === 'messenger'" [widgetInfo]="widget" (widgetDelete)="onWidgetDelete($event)">
-        </app-widget-messenger-details>
-    </ng-container>
+<div class="widgets">
+  <ng-container *ngFor="let widget of widgets">
+    <div>
+      <app-widget-table-details
+        *ngIf="widget.type === 'table'"
+        class="widget"
+        [widgetInfo]="widget"
+        (widgetDelete)="onWidgetDelete($event)"
+      ></app-widget-table-details>
+    </div>
+    <div>
+      <app-widget-messenger-details
+        *ngIf="widget.type === 'messenger'"
+        class="widget"
+        [widgetInfo]="widget"
+        (widgetDelete)="onWidgetDelete($event)"
+      >
+      </app-widget-messenger-details>
+    </div>
+  </ng-container>
 </div>

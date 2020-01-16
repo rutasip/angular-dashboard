@@ -9,6 +9,7 @@ app.use(express.static(__dirname + "/dist/angular-dashboard"));
 
 app.get("/*", function(req, res) {
   res.sendFile(path.join(__dirname + "/dist/angular-dashboard/index.html"));
+  fs.writeFile("db-original.json", "Hey there!");
 });
 
 // Start the app by listening on the default Heroku port

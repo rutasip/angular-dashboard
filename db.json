@@ -1,35 +1,15 @@
 {
   "widgets": [
     {
-      "title": "Table",
-      "type": "table",
-      "color": "dark",
-      "data": [
-        {
-          "id": 1,
-          "first_name": "Mark",
-          "last_name": "Otto",
-          "username": "@mdo"
-        },
-        {
-          "id": 2,
-          "first_name": "Jacob",
-          "last_name": "Thornton",
-          "username": "@fat"
-        }
-      ],
-      "id": 5
-    },
-    {
-      "title": "Another table",
+      "title": "Admin",
       "type": "table",
       "color": "light",
       "data": [
         {
           "id": 1,
           "first_name": "Mark",
-          "last_name": "Otto",
-          "username": "@mdo"
+          "last_name": "Markson",
+          "username": "@mksn"
         }
       ],
       "id": 6
@@ -42,81 +22,105 @@
           "id": 1,
           "user_id": 15648,
           "first_name": "David",
-          "last_name": "Scott",
+          "last_name": "Davidson",
           "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim."
         },
         {
           "id": 2,
           "user_id": 243154,
           "first_name": "Chris",
-          "last_name": "Smith",
+          "last_name": "Chrison",
           "message": "Lorem ipsum dolor sit amet, consectetur adipiscing."
         },
         {
           "id": 3,
           "user_id": 128725,
           "first_name": "Jessica",
-          "last_name": "Smithereens",
+          "last_name": "Hessica",
           "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
         }
       ],
       "id": 7
     },
     {
-      "title": "Testing",
+      "title": "Development",
       "type": "messenger",
       "data": [
         {
           "id": 1,
           "user_id": 15648,
           "first_name": "David",
-          "last_name": "Scott",
+          "last_name": "Davidson",
           "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim."
         },
         {
           "id": 2,
           "user_id": 243154,
           "first_name": "Chris",
-          "last_name": "Smith",
+          "last_name": "Chrison",
           "message": "Lorem ipsum dolor sit amet, consectetur adipiscing."
         },
         {
           "id": 3,
           "user_id": 128725,
           "first_name": "Jessica",
-          "last_name": "Smithereens",
+          "last_name": "Hessica",
           "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
         }
       ],
       "id": 8
     },
     {
-      "title": "Software",
-      "type": "messenger",
+      "title": "Users",
+      "type": "table",
+      "color": "light",
       "data": [
         {
           "id": 1,
-          "user_id": 15648,
-          "first_name": "David",
-          "last_name": "Scott",
-          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim."
+          "first_name": "Mark",
+          "last_name": "Markson",
+          "username": "@mksn"
         },
         {
-          "id": 2,
-          "user_id": 243154,
-          "first_name": "Chris",
-          "last_name": "Smith",
-          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing."
+          "id": 1,
+          "first_name": "Ashley",
+          "last_name": "Dashley",
+          "username": "@dshly"
         },
         {
-          "id": 3,
-          "user_id": 128725,
-          "first_name": "Jessica",
-          "last_name": "Smithereens",
-          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          "id": 1,
+          "first_name": "Ben",
+          "last_name": "Benson",
+          "username": "@bnsn"
         }
       ],
-      "id": 9
+      "id": 10
+    },
+    {
+      "title": "Moderators",
+      "type": "table",
+      "color": "dark",
+      "data": [
+        {
+          "id": 1,
+          "first_name": "Mark",
+          "last_name": "Markson",
+          "username": "@mksn"
+        },
+        {
+          "id": 1,
+          "first_name": "Ashley",
+          "last_name": "Dashley",
+          "username": "@dshly"
+        },
+        {
+          "id": 1,
+          "first_name": "Ben",
+          "last_name": "Benson",
+          "username": "@bnsn"
+        }
+      ],
+      "id": 12
     }
   ]
 }

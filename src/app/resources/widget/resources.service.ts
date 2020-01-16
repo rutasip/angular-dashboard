@@ -24,9 +24,11 @@ export class ResourcesService {
     return this.http.get<Widget[]>(`${environment.apiUrl}/widgets/${id}`);
   }
 
-  deleteWidget(id: number) {
-    return this.http.delete<Widget[]>(`${environment.apiUrl}/widgets/${id}`);
-  }
+  // Delete widget turned off for deployed version
+
+  // deleteWidget(id: number) {
+  //   return this.http.delete<Widget[]>(`${environment.apiUrl}/widgets/${id}`);
+  // }
 
   createWidget(model) {
     model.data = JSON.parse(model.data);

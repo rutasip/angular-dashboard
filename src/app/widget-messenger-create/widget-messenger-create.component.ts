@@ -1,19 +1,18 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { Router } from '@angular/router';
-import { WidgetMessengerCreate, WidgetType } from '../resources/widget/models';
-import { ResourcesService } from '../resources/widget/resources.service';
+import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
+import { Router } from "@angular/router";
+import { WidgetMessengerCreate, WidgetType } from "../resources/widget/models";
+import { ResourcesService } from "../resources/widget/resources.service";
 
 @Component({
-  selector: 'app-widget-messenger-create',
-  templateUrl: './widget-messenger-create.component.html',
-  styleUrls: ['./widget-messenger-create.component.css']
+  selector: "app-widget-messenger-create",
+  templateUrl: "./widget-messenger-create.component.html",
+  styleUrls: ["./widget-messenger-create.component.css"]
 })
 export class WidgetMessengerCreateComponent implements OnInit {
-
   model: WidgetMessengerCreate = {
-    title: '',
+    title: "",
     type: WidgetType.Messenger,
-    data: '',
+    data: ""
   };
 
   constructor(
@@ -21,13 +20,11 @@ export class WidgetMessengerCreateComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   createWidget() {
     this.resourcesService.createWidget(this.model).subscribe((data: {}) => {
-      this.router.navigate(['/'])
+      this.router.navigate(["/"]);
     });
   }
-
 }

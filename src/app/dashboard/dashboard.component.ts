@@ -20,11 +20,14 @@ export class DashboardComponent implements OnInit {
   }
 
   onWidgetDelete(id: number) {
-    this.resourcesService
-      .deleteWidget(id)
-      .subscribe(
-        response =>
-          (this.widgets = this.widgets.filter(widget => widget.id !== id))
-      );
+    // Delete widget turned off for deployed version
+
+    // this.resourcesService
+    //   .deleteWidget(id)
+    //   .subscribe(
+    //     response =>
+    //       (this.widgets = this.widgets.filter(widget => widget.id !== id))
+    //   );
+    this.widgets = this.widgets.filter(widget => widget.id !== id);
   }
 }
